@@ -1,68 +1,100 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Task-Manager
 
-## Available Scripts
+This project is a simple to-do list developed with ReactJS, Redux and Firebase.
 
-In the project directory, you can run:
+The application allows:
+- Register as a user
+- Log in as a user
+- Logout as a user
+- Add tasks
+- Add categories
+- Delete tasks
+- Delete categories
+- Change your profile picture.
+## Built with 🛠️
 
-### `npm start`
+* [Create React App](https://facebook.github.io/create-react-app/docs/getting-started) - Frontend Framework 
+* [Bootstrap](https://getbootstrap.com/) - CSS Framework
+* [Redux](https://redux.js.org/) - A Predictable State Container for JS Apps
+* [Firebase](https://rometools.github.io/rome/) - A comprehensive app
+development platform by Google
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Firebase products used
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+* [Authentication](https://firebase.google.com/docs/auth) - Authentic and manage users
+* [Cloud Firestore](https://firebase.google.com/docs/firestore) - Non SQL database. Real-time updates, powerful queries, and automatic scaling.
+* [Cloud Storage](https://firebase.google.com/docs/storage) - Store and view user-generated content
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Demo 🚀
+You can see the demo [here](https://task-manager-135a7.web.app/) 
 
-### `npm run build`
+## Screenshots📌
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Login Page
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+On this page the user can log in using their email and their password.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![image](https://user-images.githubusercontent.com/59363092/83806283-93f5c080-a6b1-11ea-8378-0de948871674.png)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Register Page
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+On this page the user can register by entering a name, their email and their password.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![image](https://user-images.githubusercontent.com/59363092/83806381-b556ac80-a6b1-11ea-8116-cb33b8c81ea3.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### App Page
 
-## Learn More
+Once the user has logged in, he can access the main page of the application. In it you can see the tasks that have been added and different tabs that sort them by categories.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Main image:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![image](https://user-images.githubusercontent.com/59363092/83806492-e0d99700-a6b1-11ea-8886-ac4244e783e6.png)
 
-### Code Splitting
+#### Adding a new category:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+![image](https://user-images.githubusercontent.com/59363092/83806532-f2bb3a00-a6b1-11ea-9a70-6b2f00518c6f.png)
 
-### Analyzing the Bundle Size
+#### Adding a new task:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+![image](https://user-images.githubusercontent.com/59363092/83806641-2007e800-a6b2-11ea-8fff-1d3d9a41ffc6.png)
 
-### Making a Progressive Web App
+#### New example category:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+![image](https://user-images.githubusercontent.com/59363092/83806747-4a59a580-a6b2-11ea-8f5d-4f01fe669658.png)
 
-### Advanced Configuration
+#### Deleting a category:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+![image](https://user-images.githubusercontent.com/59363092/83806834-60676600-a6b2-11ea-8618-98aa73768ebc.png)
 
-### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-### `npm run build` fails to minify
+## How to use this code ⚙️
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1. You [clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) this repository 
+2. Install all the dependences with `npm install`
+3. Create your own project in [Firebase](https://firebase.google.com/docs/web/setup)
+4. Install and initialize [firebase tools](https://firebase.google.com/docs/cli)
+5. In the services folder, edit the firebase.js file with your settings.
+
+```javascript
+const firebaseConfig = {
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_DB_URL,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID
+}
+```
+6. Once connected to firebase, deploy all the configured rules
+7. Finally you can run the react application with the command `npm start`. [More Info](https://facebook.github.io/create-react-app/docs/getting-started)
+
+
+
+
+## Authors ✒️
+**Javier Linares** - *Initial work* - [soyjavierlinares](https://github.com/soyjavierlinares)
+
